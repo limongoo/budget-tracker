@@ -1,4 +1,4 @@
-401 JS --  Lab 31 Budget Tracker
+Budget Tracker - Lab 1 "Categories"
 ===
 
 ## Requirements  
