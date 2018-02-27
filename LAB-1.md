@@ -67,3 +67,9 @@ The App component should set up the Provider for the redux store and the Router.
 
 ####  Documentation  
 Write a description of the project in your README.md
+
+####  Lab Teams  
+* Jenny + Charlie
+* Michael + Charly
+* Grace + Christina
+* Ivan + Jacob + Jack
