@@ -9,15 +9,15 @@ export function categories(state = [], { type, payload }) {
         ...state,
         payload
       ];
-    case CATEGORY_REMOVE:
-      return state.filter(n => n.id !== payload);
-    case CATEGORY_UPDATE: {
-      return [
-        ...state.slice(0, index),
-        { ...state[index], ...payload },
-        ...state.slice(index + 1)
-      ];
-    }
+    // case CATEGORY_REMOVE:
+    //   return state.filter(n => n.id !== payload);
+    // case CATEGORY_UPDATE: {
+    //   return [
+    //     ...state.slice(0, index),
+    //     { ...state[index], ...payload },
+    //     ...state.slice(index + 1)
+    //   ];
+    // }
     default:
       return state;
   }
