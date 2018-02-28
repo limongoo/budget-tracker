@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import Categories from './budget/Categories';
 import './App.css';
 
 export default class App extends Component {
 
-render() {
-
+  render() {
 
     return (
       <div className="app">
@@ -15,7 +15,7 @@ render() {
         </header>
 
         <main role="main" id="main">
-          <p>main content</p>
+          <Categories/>
         </main>
 
         <footer role="contentinfo" id="footer">
