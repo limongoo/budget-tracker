@@ -73,3 +73,6 @@ Write a description of the project in your README.md
 * Michael + Charly
 * Grace + Christina
 * Ivan + Jacob + Jack
+
+####  Devsign Notes
+See our [classwork repo](https://github.com/acl-devsign-winter-2018/classwork/tree/master/frontend/week02_state-redux/class02_devsign-notes)
