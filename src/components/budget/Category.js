@@ -25,15 +25,17 @@ class Category extends Component {
     const { editing } = this.state;
 
     return (
-      <li>
+      <li className="category-li">
         {editing ? 
           <CategoryForm id={id} text={text} onEdit={this.handleEdit}/> :
-          <p>{text} — <time>{timestamp.toLocaleString()}</time></p>
+          <p><span className="category-title">{text}</span> <br/><time>Created on: {timestamp.toLocaleString()}</time></p>
         }
-        <button onClick={this.handleToggleEdit}>
-          {editing ? 'cancel' : '✎'}
-        </button>
-        <button onClick={() => removeCategory(id)}>X</button>
+        <div className="buttons">
+          <button onClick={this.handleToggleEdit}>
+            {editing ? 'cancel' : '✎'}
+          </button>
+          <button onClick={() => removeCategory(id)}>✖</button>
+        </div>
       </li>
     );
   }

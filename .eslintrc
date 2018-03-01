@@ -15,11 +15,13 @@
     "jest": true
   },
   "plugins": [
-    "babel"
+    "babel",
+    "jsx-a11y"
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "rules": {
       "no-console": "warn",
@@ -50,6 +52,7 @@
       "babel/object-curly-spacing": ["error", "always"],
       "babel/no-invalid-this": 1,
       "babel/semi": 1,
-      "react/prop-types": "off"
+      "react/prop-types": "off",
+      "jsx-a11y/rule-name": 2
   }
 }

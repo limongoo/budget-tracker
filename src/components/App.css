@@ -28,6 +28,7 @@
   grid-area: content;
   text-align: center;
   background-color: $lightgray;
+  padding: 1rem;
 }
 
 #footer {
@@ -60,8 +61,14 @@
   }
 }
 
+.main-container {
+  text-align: left;
+  padding: 2rem 0;
+}
+
 .footer {
   text-align: left;
+  color: $gray;
 }
 
 /* ----- Media Queries ----- */
@@ -81,5 +88,10 @@
 
   .logo {
     font-size: 2rem;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
   }
 }
