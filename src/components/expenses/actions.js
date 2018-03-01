@@ -4,6 +4,7 @@ import shortid from 'shortid';
 export function addExpense(categoryId, expense) {
   expense.id = shortid();
   expense.categoryId = categoryId;
+  expense.timestamp = new Date();
 
   return {
     type: EXPENSE_ADD,
