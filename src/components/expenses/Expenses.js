@@ -17,7 +17,7 @@ class Expenses extends Component {
     return (
       <section>
         <CategoryForm onEdit={this.handleAdd}/>
-        <ul className="comment-ul">
+        <ul className="expense-ul">
           {expenses.map(expense => (
             <Expense key={expense.id} {...expense}/>
           ))}

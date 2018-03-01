@@ -7,10 +7,13 @@ class Expense extends Component {
     const { id, text, categoryId, removeExpense, timestamp } = this.props;
 
     return (
-      <li>
-        {text}
-        <p><time>Created on: {timestamp.toLocaleString()}</time></p>
-        <button className="note-remove" onClick={() => removeExpense(id, categoryId)}>✖</button>
+      <li className="expense-li">
+        <p>{text}<br/>
+          <time>{timestamp.toLocaleString()}</time>
+        </p>
+        <div>
+          <button className="note-remove" onClick={() => removeExpense(id, categoryId)}>✖</button>
+        </div>
       </li>
     );
   }
