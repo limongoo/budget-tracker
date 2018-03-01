@@ -28,7 +28,7 @@ class Category extends Component {
       <li>
         {editing ? 
           <CategoryForm id={id} text={text} onEdit={this.handleEdit}/> :
-          <p><time>{timestamp.toLocaleString()}</time> - {text}</p>
+          <p>{text} — <time>{timestamp.toLocaleString()}</time></p>
         }
         <button onClick={this.handleToggleEdit}>
           {editing ? 'cancel' : '✎'}
