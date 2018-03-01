@@ -1,9 +1,9 @@
 import { CATEGORY_ADD, CATEGORY_REMOVE } from '../budget/reducer';
 
-export const COMMENT_ADD = 'COMMENT_ADD';
-export const COMMENT_REMOVE = 'COMMENT_REMOVE';
+export const EXPENSE_ADD = 'EXPENSE_ADD';
+export const EXPENSE_REMOVE = 'EXPENSE_REMOVE';
 
-export function commentsByCategory(state = {}, { type, payload }) {
+export function expensesByCategory(state = {}, { type, payload }) {
   switch(type) {
 
     case CATEGORY_ADD:
@@ -18,25 +18,25 @@ export function commentsByCategory(state = {}, { type, payload }) {
       return nextState;
     }
     
-    case COMMENT_ADD: {
+    case EXPENSE_ADD: {
       const { categoryId } = payload;
-      const categoryComments = state[categoryId];
+      const categoryExpenses = state[categoryId];
       return {
         ...state,
         [categoryId]: [
-          ...categoryComments,
+          ...categoryExpenses,
           payload
         ]
       };
     }
 
-    case COMMENT_REMOVE: {
+    case EXPENSE_REMOVE: {
       const { id, categoryId } = payload;
-      const categoryComments = state[categoryId];
+      const categoryExpenses = state[categoryId];
 
       return {
         ...state,
-        [categoryId]: categoryComments.filter(c => c.id !== id)
+        [categoryId]: categoryExpenses.filter(c => c.id !== id)
       };
     }
     default:

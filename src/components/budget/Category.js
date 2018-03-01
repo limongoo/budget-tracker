@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateCategory, removeCategory } from './actions';
 import CategoryForm from '../common/CategoryForm';
-import Comments from '../comments/Comments';
+import Expenses from '../expenses/Expenses';
 
 class Category extends Component {
 
@@ -40,8 +40,8 @@ class Category extends Component {
           </div>
         </div>
         <div className="comment-column">
-          <p className="create-title">Add Comment(s):</p>
-          <Comments categoryId={id}/>
+          <p className="create-title">Add Expense(s):</p>
+          <Expenses categoryId={id}/>
         </div>
       </li>
     );
