@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateCategory, removeCategory } from './actions';
-import CategoryForm from './CategoryForm';
+import CategoryForm from '../common/CategoryForm';
 
 class Category extends Component {
 

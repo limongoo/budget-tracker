@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Category.css';
+import '../budget/Category.css';
 
 export default class CategoryForm extends Component {
 
@@ -30,7 +30,7 @@ export default class CategoryForm extends Component {
       <div>
         <form onSubmit = {this.handleSubmit} className="add-category">
           <label htmlFor="category">
-            <input required name="text" value={text}  onChange={this.handleChange} placeholder="ex: Food"/>
+            <input required id="category" name="text" value={text} onChange={this.handleChange} placeholder="ex: Food"/>
           </label>
           <button type="submit">{ id ? 'Update Category' : 'Add' }</button>
         </form>

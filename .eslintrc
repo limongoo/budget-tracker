@@ -52,7 +52,6 @@
       "babel/object-curly-spacing": ["error", "always"],
       "babel/no-invalid-this": 1,
       "babel/semi": 1,
-      "react/prop-types": "off",
-      "jsx-a11y/rule-name": 2
+      "react/prop-types": "off"
   }
 }
