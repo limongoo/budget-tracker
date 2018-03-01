@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateCategory, removeCategory } from './actions';
 import CategoryForm from '../common/CategoryForm';
+import Comments from '../comments/Comments';
 
 class Category extends Component {
 
@@ -26,10 +27,13 @@ class Category extends Component {
 
     return (
       <li className="category-li">
-        {editing ? 
-          <CategoryForm id={id} text={text} onEdit={this.handleEdit}/> :
-          <p><span className="category-title">{text}</span> <br/><time>Created on: {timestamp.toLocaleString()}</time></p>
-        }
+        <div>
+          {editing ? 
+            <CategoryForm id={id} text={text} onEdit={this.handleEdit}/> :
+            <p><span className="category-title">{text}</span> <br/><time>Created on: {timestamp.toLocaleString()}</time></p>
+          }
+          <Comments categoryId={id}/>
+        </div>
         <div className="buttons">
           <button onClick={this.handleToggleEdit}>
             {editing ? 'cancel' : '✎'}

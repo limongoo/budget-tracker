@@ -7,6 +7,7 @@ export default class CategoryForm extends Component {
     super(props);
 
     this.state = {
+      text: '',
       ...props
     };
   }
@@ -16,8 +17,8 @@ export default class CategoryForm extends Component {
     this.props.onEdit({
       ...this.state
     });
-
     this.setState({ text: '' });
+    console.log(this.state);
   };
 
   handleChange = ({ target }) => {
