@@ -105,9 +105,11 @@ time {
     padding: 1.5rem;
     align-items: center;
     transition: 0.3s ease all;
+    background-color: rgb(250, 250, 250);
     
     &:hover {
       transform: scale(1.02);
+      background-color: $white;
       box-shadow: 5px 5px 21px 0px rgba(0,0,0,0.1);
     }
   }
