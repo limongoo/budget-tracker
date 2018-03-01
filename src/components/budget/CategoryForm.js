@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Category.css';
 
 export default class CategoryForm extends Component {
 
@@ -26,8 +27,8 @@ export default class CategoryForm extends Component {
   render() {
     const { id, text } = this.state;
     return (
-      <form onSubmit = {this.handleSubmit}>
-        <input required name="text" value={text}  onChange={this.handleChange}/>
+      <form onSubmit = {this.handleSubmit} className="add-category">
+        <input required name="text" value={text}  onChange={this.handleChange} placeholder="Category"/>
         <button type="submit">{ id ? 'Update' : 'Add' }</button>
       </form>
     );
