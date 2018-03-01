@@ -40,7 +40,7 @@ class Category extends Component {
           </div>
         </div>
         <div className="comment-column">
-          <p className="create-title">Add Note(s):</p>
+          <p className="create-title">Add Comment(s):</p>
           <Comments categoryId={id}/>
         </div>
       </li>
