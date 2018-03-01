@@ -1,0 +1,33 @@
+@import '../../styles/variables.css';
+
+.comment-ul {
+  list-style: none;
+  padding: 0 20px;
+  margin: 1.2rem 0 0;
+
+  li {
+    padding: 0.6rem 0;
+    list-style-type: square;
+  }
+}
+
+.note-remove {
+  margin: 0 0 0 0.7rem;
+  font-size: 0.7rem;
+  background-color: $lightgray;
+  color: $black;
+  transition: 0.3s ease all;
+  padding: 0.3rem 0.6rem;
+  border: 0px;
+  cursor: pointer;
+}
+
+
+@media (min-width: 700px) {
+
+  .note-remove:hover {
+    background-color: $green;
+    color: $white;
+  }
+
+}

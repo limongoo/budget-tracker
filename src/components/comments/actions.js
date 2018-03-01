@@ -5,7 +5,7 @@ export function addComment(categoryId, comment) {
   comment.id = shortid();
   comment.categoryId = categoryId;
 
-  return{
+  return {
     type: COMMENT_ADD,
     payload: comment
   };

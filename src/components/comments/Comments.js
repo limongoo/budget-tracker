@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { addComment } from './actions';
 import CategoryForm from '../common/CategoryForm';
 import Comment from './Comment';
+import './Comment.css';
 
 class Comments extends Component {
 
@@ -12,11 +13,11 @@ class Comments extends Component {
   };
 
   render() {
-    const{ comments } = this.props;
-    return(
+    const { comments } = this.props;
+    return (
       <section>
         <CategoryForm onEdit={this.handleAdd}/>
-        <ul>
+        <ul className="comment-ul">
           {comments.map(comment => (
             <Comment key={comment.id} {...comment}/>
           ))}

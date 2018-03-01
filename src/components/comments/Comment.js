@@ -9,7 +9,7 @@ class Comment extends Component {
     return (
       <li>
         {text}
-        <button onClick={() => removeComment(id, categoryId)}>✖</button>
+        <button className="note-remove" onClick={() => removeComment(id, categoryId)}>✖</button>
       </li>
     );
   }

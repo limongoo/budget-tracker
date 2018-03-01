@@ -32,13 +32,16 @@ class Category extends Component {
             <CategoryForm id={id} text={text} onEdit={this.handleEdit}/> :
             <p><span className="category-title">{text}</span> <br/><time>Created on: {timestamp.toLocaleString()}</time></p>
           }
-          <Comments categoryId={id}/>
+          <div className="buttons">
+            <button onClick={this.handleToggleEdit}>
+              {editing ? 'cancel' : '✎'}
+            </button>
+            <button onClick={() => removeCategory(id)}>✖</button>
+          </div>
         </div>
-        <div className="buttons">
-          <button onClick={this.handleToggleEdit}>
-            {editing ? 'cancel' : '✎'}
-          </button>
-          <button onClick={() => removeCategory(id)}>✖</button>
+        <div className="comment-column">
+          <p className="create-title">Add Note(s):</p>
+          <Comments categoryId={id}/>
         </div>
       </li>
     );

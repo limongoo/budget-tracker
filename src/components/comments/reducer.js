@@ -7,10 +7,10 @@ export function commentsByCategory(state = {}, { type, payload }) {
   switch(type) {
 
     case CATEGORY_ADD:
-    return {
-      ...state,
-      [payload.id]: []
-    };
+      return {
+        ...state,
+        [payload.id]: []
+      };
 
     case CATEGORY_REMOVE: {
       const nextState = { ...state };
