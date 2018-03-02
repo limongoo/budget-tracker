@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addExpense } from './actions';
-import CategoryForm from '../common/CategoryForm';
+import ExpenseForm from '../expenses/ExpenseForm';
 import Expense from './Expense';
 import './Expense.css';
 
@@ -16,7 +16,7 @@ class Expenses extends Component {
     const { expenses } = this.props;
     return (
       <section>
-        <CategoryForm onEdit={this.handleAdd}/>
+        <ExpenseForm onEdit={this.handleAdd}/>
         <ul className="expense-ul">
           {expenses.map(expense => (
             <Expense key={expense.id} {...expense}/>
