@@ -7,9 +7,9 @@ export default class expenseForm extends Component {
     super(props);
 
     this.state = {
-      expense: '',
+      name: '',
       price: '',
-      ...props
+      ...props.expenseObj
     };
   }
 
@@ -18,7 +18,7 @@ export default class expenseForm extends Component {
     this.props.onEdit({
       ...this.state
     });
-    this.setState({ expense: '', price: '' });
+    this.setState({ name: '', price: '' });
     // console.log(this.state);
   };
 
@@ -27,12 +27,12 @@ export default class expenseForm extends Component {
   };
 
   render() {
-    const { id, expense, price } = this.state;
+    const { id, name, price } = this.state;
     return (
       <div>
         <form onSubmit = {this.handleSubmit} className="add-category">
           <label htmlFor="expense">
-            <input required id="expense" name="expense" value={expense} onChange={this.handleChange} placeholder="ex: Expense"/>
+            <input required id="expense" name="name" value={name} onChange={this.handleChange} placeholder="ex: Expense"/>
             <input required id="expense" name="price" value={price} onChange={this.handleChange} placeholder="ex: Price"/>
           </label>
           <button type="submit">{ id ? 'Update Expense' : 'Add' }</button>

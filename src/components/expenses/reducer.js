@@ -32,14 +32,14 @@ export function expensesByCategory(state = {}, { type, payload }) {
     }
     
     case EXPENSE_UPDATE: {
-      const { id, categoryId } = payload;
+      const { id, categoryId, updates } = payload;
       const expenses = state[categoryId];
       const index = expenses.findIndex(expense => expense.id === id);
       return {
         ...state,
         [categoryId]: [
           ...expenses.slice(0, index),
-          { ...expenses[index], ...payload },
+          { ...expenses[index], ...updates },
           ...expenses.slice(index + 1)
         ],
       };

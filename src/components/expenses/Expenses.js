@@ -19,7 +19,7 @@ class Expenses extends Component {
         <ExpenseForm onEdit={this.handleAdd}/>
         <ul className="expense-ul">
           {expenses.map(expense => (
-            <Expense key={expense.id} {...expense}/>
+            <Expense key={expense.id} expenseObj={expense}/>
           ))}
         </ul>
       </section>

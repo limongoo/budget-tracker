@@ -10,7 +10,11 @@ class Expense extends Component {
   };
 
   handleEdit = expense => {
-    this.props.updateExpense(expense);
+    this.props.updateExpense({ 
+      id: expense.id,
+      categoryId: this.categoryId,
+      updates: expense
+    });
     this.setState({ editing: false });
   };
 
@@ -21,15 +25,17 @@ class Expense extends Component {
   };
   
   render() {
-    const { id, expense, price, categoryId, removeExpense, timestamp } = this.props;
+    const { expenseObj, removeExpense } = this.props;
+    const { id, name, price, categoryId, timestamp } = expenseObj;
     const { editing } = this.state;
+    this.categoryId = categoryId;
 
     return (
       <li className="expense-li">
         <div>
           {editing ? 
-            <ExpenseForm id={id} text={expense} onEdit={this.handleEdit}/> :
-            <p>{expense} - {price}<br/>
+            <ExpenseForm expenseObj={expenseObj} onEdit={this.handleEdit}/> :
+            <p>{name} - {price}<br/>
               <time>{timestamp.toLocaleString()}</time>
             </p>
           }
