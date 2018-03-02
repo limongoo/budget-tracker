@@ -26,7 +26,7 @@ export function expensesByCategory(state = {}, { type, payload }) {
         ...state,
         [categoryId]: [
           ...categoryExpenses,
-        payload
+          payload
         ]
       };
     }
@@ -39,17 +39,22 @@ export function expensesByCategory(state = {}, { type, payload }) {
         ...state,
         [categoryId]: [
           ...expenses.slice(0, index),
-          { ...expenses[index], ...payload},
+          { ...expenses[index], ...payload },
           ...expenses.slice(index + 1)
         ],
       };
     }
+    
     case EXPENSE_REMOVE: {
       const { id, categoryId } = payload;
       const categoryExpenses = state[categoryId];
 
-      return state.filter(c => c.id !== id);
+      return { 
+        ...state,
+        [categoryId]: categoryExpenses.filter(c => c.id !== id)
+      };
     }
+
     default:
       return state;
   }

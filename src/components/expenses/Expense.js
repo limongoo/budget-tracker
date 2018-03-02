@@ -29,9 +29,9 @@ class Expense extends Component {
         <div>
           {editing ? 
             <ExpenseForm id={id} text={expense} onEdit={this.handleEdit}/> :
-              <p>{expense} - {price}<br/>
+            <p>{expense} - {price}<br/>
               <time>{timestamp.toLocaleString()}</time>
-              </p>
+            </p>
           }
           <div className="buttons">
             <button onClick={this.handleToggleEdit}>
