@@ -7,20 +7,20 @@ import './Category.css';
 
 class Categories extends Component {
   
-  // componentDidMount() {
+  componentDidMount() {
   //   this.props.load();
-  //   this.props.addCategory({ text: 'Tacos' });
-  //   this.props.addCategory({ text: 'Burritos' });
-  //   this.props.addCategory({ text: 'Sushi' });
-  // }
-
+    // this.props.addCategory({ text: 'Tacos' });
+    // this.props.addCategory({ text: 'Burritos' });
+    // this.props.addCategory({ text: 'Sushi' });
+  }
+  
   render() {
     const { categories, addCategory } = this.props;
     return (
       <div className="two-column">
         <div className="two-left">
           <p className="create-title">Create new category:</p>
-          <CategoryForm onEdit={addCategory}/>
+          <CategoryForm onEdit={category => addCategory(category)}/>
         </div>
         <ul className="category-ul">
           {categories.map(category => <Category key={category.id} {...category}/>)}

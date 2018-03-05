@@ -41,7 +41,6 @@ export function updateCategory(category) {
         });
       });
   };
- 
 }
 
 export function removeCategory(id) {
