@@ -15,11 +15,9 @@ export function load() {
 }
 
 export function addCategory(category) {
-  category.name = category.category;
   return (dispatch) => {
     return budgetApi.add(category)
       .then(addedCategory => {
-        addedCategory.category = addedCategory.name;
         const action = {
           type: CATEGORY_ADD,
           payload: addedCategory
@@ -30,11 +28,9 @@ export function addCategory(category) {
 }
 
 export function updateCategory(category) {
-  category.name = category.category;
   return dispatch => {
     return budgetApi.update(category)
       .then(updatedCategory => {
-        updatedCategory.category = updatedCategory.name;
         dispatch({
           type: CATEGORY_UPDATE,
           payload: updatedCategory

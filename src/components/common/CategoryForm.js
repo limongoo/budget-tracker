@@ -18,7 +18,7 @@ export default class CategoryForm extends Component {
       ...this.state
     });
     this.setState({ name: '' });
-    // console.log(this.state);
+    console.log(this.state);
   };
 
   handleChange = ({ target }) => {
