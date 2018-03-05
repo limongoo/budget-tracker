@@ -7,11 +7,11 @@ import './Category.css';
 
 class Categories extends Component {
   
-  componentDidMount() {
-    this.props.addCategory({ text: 'Tacos' });
-    this.props.addCategory({ text: 'Burritos' });
-    this.props.addCategory({ text: 'Sushi' });
-  }
+  // componentDidMount() {
+  //   this.props.addCategory({ text: 'Tacos' });
+  //   this.props.addCategory({ text: 'Burritos' });
+  //   this.props.addCategory({ text: 'Sushi' });
+  // }
 
   render() {
     const { categories, addCategory } = this.props;
