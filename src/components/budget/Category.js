@@ -25,7 +25,6 @@ class Category extends Component {
     const { id, timestamp, name, removeCategory } = this.props;
     const { editing } = this.state;
 
-    console.log(this.props);
     return (
       <li className="category-li">
         <div>

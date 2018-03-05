@@ -5,7 +5,7 @@ export function load() {
   return dispatch => {
     return budgetApi.load()
       .then(categories => {
-        categories.map(category => category.category = category.name);
+        // categories.map(category => category.category = category.name);
         dispatch({
           type: CATEGORY_LOAD,
           payload: categories
