@@ -1,22 +1,17 @@
 import { EXPENSE_ADD, EXPENSE_REMOVE, EXPENSE_UPDATE } from './reducer';
 import shortid from 'shortid';
-import budgetApi from '../../services/budgetApi';
+// import budgetApi from '../../services/budgetApi';
 
 export function addExpense(categoryId, expense) {
-  return dispatch => {
-    return budgetApi.addExpense(categoryId, expense)
-      .then(expense => {
-        dispatch({
-          type: EXPENSE_ADD,
-          payload: {
-            categoryId,
-            expense
-          }
-        });
-      });
+  expense.id = shortid();
+  expense.categoryId = categoryId;
+  expense.timestamp = new Date();
+
+  return {
+    type: EXPENSE_ADD,
+    payload: expense
   };
 }
-
 
 export function updateExpense(expense) {
   return {
