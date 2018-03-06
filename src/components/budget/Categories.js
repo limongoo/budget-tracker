@@ -8,7 +8,7 @@ import './Category.css';
 class Categories extends Component {
   
   componentDidMount() {
-    this.props.load();
+    // this.props.load();
     // this.props.addCategory({ name: 'Tacos' });
     // this.props.addCategory({ text: 'Burritos' });
     // this.props.addCategory({ text: 'Sushi' });
