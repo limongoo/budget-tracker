@@ -1,11 +1,14 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import { categories } from './components/budget/reducer';
-import { expensesByCategory } from './components/expenses/reducer';
+import { categories } from '../components/budget/reducer';
+import { expensesByCategory } from '../components/expenses/reducer';
 import thunk from 'redux-thunk';
+import promiseMiddleware from './promiseMiddleware';
+import { user } from '../components/reducers';
 
 const reducer = combineReducers({
   categories,
-  expensesByCategory
+  expensesByCategory,
+  user
 });
 
 const async = store => next => action => {
@@ -23,7 +26,9 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   reducer,
   composeEnhancers(
-    applyMiddleware(thunk) 
+    applyMiddleware(
+      thunk,
+      promiseMiddleware) 
   ));
 
 export default store;
