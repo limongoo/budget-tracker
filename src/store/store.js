@@ -11,14 +11,14 @@ const reducer = combineReducers({
   user
 });
 
-const async = store => next => action => {
-  if(typeof action === 'function') {
-    action(store.dispatch, store.getState);
-  }
-  else {
-    return next(action);
-  }
-};
+// const async = store => next => action => {
+//   if(typeof action === 'function') {
+//     action(store.dispatch, store.getState);
+//   }
+//   else {
+//     return next(action);
+//   }
+// };
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
