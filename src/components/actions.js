@@ -3,7 +3,7 @@ import { USER } from './reducers';
 
 export function listenForUser() {
   return dispatch => {
-    auth.onAuthStateChange(user => {
+    auth.onAuthStateChanged(user => {
       dispatch({
         type: USER,
         payload: user

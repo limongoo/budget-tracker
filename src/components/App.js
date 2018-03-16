@@ -5,7 +5,7 @@ import './App.css';
 import { Signin, Signup } from './Auth';
 import PrivateRoute from './PrivateRoute';
 import Home from './home/Home';
-// import Header from './header/Header';
+import Header from './header/Header';
 
 export default class App extends PureComponent {
 
@@ -20,7 +20,7 @@ export default class App extends PureComponent {
           <Fragment>
             
 
-          
+            <Header/>
 
             <main role="main" id="main">
               <section className="main-container maxwidth-wrap">

@@ -30,20 +30,24 @@ class Credentials extends PureComponent {
     const { buttonText } = this.props;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div>
-          Email: <input name="email" required/>
-        </div>
-        <div>
-          Password: <input name="password" required/>
-        </div>
-        <div>
-          <button>{buttonText}</button>
-        </div>
-        <pre style={{ color: 'red' }}>
-          {error && error.message}
-        </pre>
-      </form>
+      <div className="sign-in">
+        <form onSubmit={this.handleSubmit} className="add-category">
+          <div>
+          Email: <input name="email" required placeholder="e@gmail.com"/>
+          </div>
+          <br/>
+          <div>
+          Password: <input name="password" required placeholder="abc123"/>
+          </div>
+          <br/>
+          <div>
+            <button>{buttonText}</button>
+          </div>
+          <pre style={{ color: 'red' }}>
+            {error && error.message}
+          </pre>
+        </form>
+      </div>
     );
   }
 }
