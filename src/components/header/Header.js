@@ -11,7 +11,6 @@ class Header extends Component {
     this.props.listenForUser();
   }
 
-
   render() { 
     const { user, logout } = this.props;
     return (
@@ -19,6 +18,7 @@ class Header extends Component {
         <section className="head-container maxwidth-wrap">
           <h1 className="logo">Budget Tracker</h1>
           <nav>
+            {user && <p>Hello, {user.name}</p>}
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/item">Item</Link></li>
