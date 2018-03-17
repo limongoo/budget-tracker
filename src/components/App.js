@@ -2,8 +2,8 @@ import React, { PureComponent, Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Categories from './budget/Categories';
 import './App.css';
-import { Signin, Signup } from './Auth';
-import PrivateRoute from './PrivateRoute';
+import { Signin, Signup } from './auth/User';
+import PrivateRoute from './auth/PrivateRoute';
 import Home from './home/Home';
 import Header from './header/Header';
 

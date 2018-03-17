@@ -1,9 +1,9 @@
-import { auth } from '../services/firebase';
+import { onUserStateChange, onSignUp, onSignIn, onSignOut } from '../../services/userFirebaseApi';
 import { USER } from './reducers';
 
 export function listenForUser() {
   return dispatch => {
-    auth.onAuthStateChanged(user => {
+    onUserStateChange(user => {
       dispatch({
         type: USER,
         payload: user
@@ -13,13 +13,13 @@ export function listenForUser() {
 }
 
 export function signup({ email, password }) {
-  return () => auth.createUserWithEmailAndPassword(email, password);
+  return () => onSignUp(email, password);
 }
 
 export function signin({ email, password }) {
-  return () => auth.signInWithEmailAndPassword(email, password);
+  return () => onSignIn(email, password);
 }
 
 export function logout() {
-  return () => auth.signOut();
+  return () => onSignOut();
 }

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import firebaseui from 'firebaseui';
 import firebase from 'firebase';
-import { providers } from '../services/firebase';
+import { providers } from '../../services/firebase';
 
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
 

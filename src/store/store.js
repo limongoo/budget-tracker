@@ -3,7 +3,7 @@ import { categories } from '../components/budget/reducer';
 import { expensesByCategory } from '../components/expenses/reducer';
 import thunk from 'redux-thunk';
 import promiseMiddleware from './promiseMiddleware';
-import { user } from '../components/reducers';
+import { user } from '../components/auth/reducers';
 
 const reducer = combineReducers({
   categories,

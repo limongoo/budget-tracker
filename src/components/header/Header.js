@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import { connect } from 'react-redux';
-import { listenForUser, logout } from '../actions';
+import { listenForUser, logout } from '../auth/actions';
 
 
 class Header extends Component {
@@ -21,9 +21,13 @@ class Header extends Component {
           <nav>
             <ul>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/dashboard">Dashboard</Link></li>
+              <li><Link to="/item">Item</Link></li>
               { user 
-                ? <li><Link to="/" onClick={logout}>Log out</Link></li>
+                ? 
+                <div>
+                  <li><Link to="/dashboard">Dashboard</Link></li>
+                  <li><Link to="/" onClick={logout}>Log out</Link></li>
+                </div>
                 : 
                 <div>
                   <li><Link to="/auth/signin">Sign In</Link></li>

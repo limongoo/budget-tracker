@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
-import GoogleAuth from '../GoogleAuth';
+import GoogleAuth from '../auth/GoogleAuth';
 
 export default class Home extends PureComponent {
 
