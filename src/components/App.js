@@ -6,7 +6,7 @@ import { Signin, Signup } from './auth/User';
 import PrivateRoute from './auth/PrivateRoute';
 import Home from './home/Home';
 import Header from './header/Header';
-
+import Loading from './loading/Loading';
 export default class App extends PureComponent {
 
   
@@ -24,6 +24,7 @@ export default class App extends PureComponent {
 
             <main role="main" id="main">
               <section className="main-container maxwidth-wrap">
+                <Loading/>
                 <Switch>
                   <Route exact path="/" component={Home}/>
                   <PrivateRoute exact path="/dashboard" component={Categories}/>

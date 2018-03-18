@@ -5,6 +5,7 @@ import ExpenseForm from '../expenses/ExpenseForm';
 import Expense from './Expense';
 import './Expense.css';
 
+
 class Expenses extends Component {
 
   handleAdd = expense => {
@@ -18,8 +19,9 @@ class Expenses extends Component {
     return (
       <section>
         <ExpenseForm onEdit={this.handleAdd}/>
+
         <ul className="expense-ul">
-          {expenses.map(expense => (
+          {expenses.map(({ expense }) => (
             <Expense key={expense.id} categoryId={categoryId} expenseObj={expense}/>
           ))}
         </ul>

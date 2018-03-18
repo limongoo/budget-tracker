@@ -4,11 +4,14 @@ import { expensesByCategory } from '../components/expenses/reducer';
 import thunk from 'redux-thunk';
 import promiseMiddleware from './promiseMiddleware';
 import { user } from '../components/auth/reducers';
+import { loading } from '../components/loading/reducers';
+
 
 const reducer = combineReducers({
   categories,
   expensesByCategory,
-  user
+  user,
+  loading
 });
 
 // const async = store => next => action => {
